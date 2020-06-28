@@ -392,6 +392,7 @@ Cell<T>     // is for “interior mutability” for Copy types; that is, when yo
 
 *Single thread use only: doesn't impl sync and send*
 
+- Allow single value to have mutiple owners
 - `Rc<>`: generic struct, like a garbage collector.  `(reference count, ptr to data)` When you clone an Rc, it just increments the count without copying the data; when it reaches 0 it drops its internal pointer.
 - `Rc::new(s)`: Turns into reference counted obj, & acts as a reference, usable with `.clone()`. S has to be immutable.
 
